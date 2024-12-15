@@ -1,0 +1,78 @@
+﻿<Window x:Class="Mastermind3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mastermind3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/Mastermind3wallpaper.jpg"/>
+    </Window.Background>
+    <Grid>
+
+        <Button x:Name="checkCode" Content="Check code"  Click="CheckCode_Click" HorizontalAlignment="Left" Margin="38,337,0,0" VerticalAlignment="Top" Height="65" Width="110" Background="{x:Null}" BorderBrush="White" Foreground="White"/>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="525,34,0,0" VerticalAlignment="Top" Width="150" Height="30" Background="Black">
+            <ComboBoxItem Content="Wit" />
+            <ComboBoxItem Content="Groen"/>
+            <ComboBoxItem Content="Blauw"/>
+            <ComboBoxItem Content="Rood"/>
+            <ComboBoxItem Content="Geel"/>
+            <ComboBoxItem Content="Oranje"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox4" VerticalAlignment="Top"  HorizontalAlignment="Left" Margin="525,272,0,0" Width="150" Height="30">
+            <ComboBoxItem Content="Wit"/>
+            <ComboBoxItem Content="Groen"/>
+            <ComboBoxItem Content="Blauw"/>
+            <ComboBoxItem Content="Rood"/>
+            <ComboBoxItem Content="Geel"/>
+            <ComboBoxItem Content="Oranje"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="525,0,0,0" VerticalAlignment="Center" Width="150" Height="30" RenderTransformOrigin="0.633,0.268" >
+            <ComboBoxItem Content="Wit"/>
+            <ComboBoxItem Content="Groen"/>
+            <ComboBoxItem Content="Blauw"/>
+            <ComboBoxItem Content="Rood"/>
+            <ComboBoxItem Content="Geel"/>
+            <ComboBoxItem Content="Oranje"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="525,114,0,0" VerticalAlignment="Top" Width="150" Height="30" >
+            <ComboBoxItem Content="Wit"/>
+            <ComboBoxItem Content="Groen"/>
+            <ComboBoxItem Content="Blauw"/>
+            <ComboBoxItem Content="Rood"/>
+            <ComboBoxItem Content="Geel"/>
+            <ComboBoxItem Content="Oranje"/>
+        </ComboBox>
+        <TextBox x:Name="colorsTextBox" HorizontalAlignment="Left" Margin="327,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="75" IsEnabled="False" Visibility="Hidden"/>
+        <TextBox x:Name="textBoxTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" IsEnabled="False" FontWeight="Bold" FontSize="14" Foreground="White" Margin="342,370,0,0" />
+        <Label x:Name="penaltyPointsLabel" Content = "Strafpunten:" Margin="160,358,486,43"   Visibility="Visible" Background="{x:Null}" FontSize="14" FontWeight="Bold" Foreground="White" />
+        <TextBox x:Name="attempsTextBox" HorizontalAlignment="Left" Margin="341,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="56" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" IsEnabled="False" FontSize="14" FontWeight="Bold"/>
+        <ListBox x:Name="historyList" Margin="35,15,505,122" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ListBoxItem>
+                <StackPanel x:Name ="listPanel" Orientation="Horizontal">
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+
+
+        <Menu x:Name="Hoofdmenu" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Bestand">
+                <MenuItem Header="Tooltip" x:Name="Tooltip" Click="Tooltip_Click"/>
+
+                <MenuItem Header="Nieuwspel" x:Name="newGame" Click="newGame_Click">
+                </MenuItem>
+                <MenuItem x:Name="highScore" Header="Highscores">
+                    <ListBox x:Name="highScoresMenu" Width="300" Height="400" />
+                </MenuItem>
+                <MenuItem x:Name="closeApp" Header="Afsluiten" Click="closeApp_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Instellingen">
+                <MenuItem x:Name="AttemptNumber" Header="Aantalpogingen" Click="AttemptNumber_Click"/>
+            </MenuItem>
+
+        </Menu>
+        <TextBox x:Name="userName1" HorizontalAlignment="Left" Margin="575,352,0,0" TextWrapping="Wrap" Text="Naam:" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
