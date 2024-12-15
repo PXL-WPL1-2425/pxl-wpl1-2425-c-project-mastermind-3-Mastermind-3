@@ -231,7 +231,7 @@ namespace Mastermind3
             Label[] attemptLabels = new Label[4];
 
             for (int i = 0; i < 4; i++)
-            {
+            { 
                 attemptLabels[i] = CreateAttemptLabel(GetColorBrush(userColors[i]));
                 attemptPanel.Children.Add(attemptLabels[i]);
             }
